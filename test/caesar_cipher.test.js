@@ -1,4 +1,5 @@
 import caesarCipher from '../src/caesar_cipher';
+
 test('caesar cipher of a string wraping from z to a ', () => {
   const result = caesarCipher('z',1);
   expect(result).toBe('a');
