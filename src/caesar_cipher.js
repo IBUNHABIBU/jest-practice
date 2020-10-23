@@ -1,11 +1,12 @@
 const caesarCipher = (str, num) => {
   num = num % 26;
   var lowerCaseStr = str.toLowerCase();
-  var alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
+  var alpha = 'abcdefghijklmnopqrstuvwxyz'
+  var alphabet = alpha.split('');
   var newStr = '';
   for(var i = 0; i < lowerCaseStr.length; i++){
     var currentLetter = lowerCaseStr[i];
-    if(currentLetter == ' '){
+    if(currentLetter == ' ' || !alpha.includes(currentLetter)){
       newStr += currentLetter;
       continue;
     }
@@ -20,5 +21,5 @@ const caesarCipher = (str, num) => {
   }
   return newStr;
 }
-console.log(caesarCipher('opq',14));
+console.log(caesarCipher('ABC!.abc', 2));
 export default caesarCipher;
