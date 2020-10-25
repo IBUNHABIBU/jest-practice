@@ -21,7 +21,7 @@ test('finds the average of an array', () => {
 
 test('finds the minimum value of an array', () => {
   expect(object.min).toBe(1);
-})
+});
 
 test('finds the maximum value of an array', () => {
   expect(object.max).toBe(8);
