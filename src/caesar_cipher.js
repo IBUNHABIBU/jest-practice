@@ -1,7 +1,7 @@
 const caesarCipher = (str, num) => {
   num = num % 26;
   var lowerCaseStr = str.toLowerCase();
-  var alpha = 'abcdefghijklmnopqrstuvwxyz'
+  var alpha = 'abcdefghijklmnopqrstuvwxyz';
   var alphabet = alpha.split('');
   var newStr = '';
   for(var i = 0; i < lowerCaseStr.length; i++){
@@ -20,6 +20,5 @@ const caesarCipher = (str, num) => {
     else newStr += alphabet[newIndex];
   }
   return newStr;
-}
-console.log(caesarCipher('ABC!.abc', 2));
+};
 export default caesarCipher;

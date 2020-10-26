@@ -1,6 +1,6 @@
 import analyze from '../src/array_analysis';
 
-beforeEach(()=> object)
+beforeEach(()=> object);
 const object = analyze([1,8,3,4,2,6]);
 test('Takes an array of numbers and return an object', () => {
   expect(object).toEqual({
