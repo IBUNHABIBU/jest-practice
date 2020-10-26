@@ -2,7 +2,7 @@ import calc from '../src/calculator';
 
 test('addition of 4 + 8 gives 12', () => {
   const sum = calc.add(4, 8);
-  expect(sum).toBe(12)
+  expect(sum).toBe(12);
 });
 
 test('substruction of 14 - 8 gives 6', () => {
