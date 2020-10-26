@@ -1,13 +1,13 @@
 import analyze from '../src/array_analysis';
 
-beforeEach(()=> object);
-const object = analyze([1,8,3,4,2,6]);
+const object = analyze([1, 8, 3, 4, 2, 6]);
+beforeEach(() => object);
 test('Takes an array of numbers and return an object', () => {
   expect(object).toEqual({
     average: 4,
     min: 1,
     max: 8,
-    length: 6
+    length: 6,
   });
 });
 
@@ -25,4 +25,4 @@ test('finds the minimum value of an array', () => {
 
 test('finds the maximum value of an array', () => {
   expect(object.max).toBe(8);
-})
+});

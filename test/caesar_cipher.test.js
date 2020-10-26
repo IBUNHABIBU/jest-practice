@@ -12,5 +12,5 @@ test('caesar cipher of string with a mixed case', () => {
 
 test('caesar cipher of string having punctuation', () => {
   const result = caesarCipher('ABC!.abc', 2);
-  expect(result).toBe('CDE!.cde')
-})
+  expect(result).toBe('CDE!.cde');
+});
