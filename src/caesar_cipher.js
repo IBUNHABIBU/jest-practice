@@ -6,7 +6,7 @@ const caesarCipher = (str, num) => {
   let newStr = '';
   for (let i = 0; i < lowerCaseStr.length; i += 1) {
     const currentLetter = lowerCaseStr[i];
-    if (currentLetter === ' ' || !alpha.includes(currentLetter)) {
+    if (currentLetter === ' ') {
       newStr += currentLetter;
       continue;
     }
