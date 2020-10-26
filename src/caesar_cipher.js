@@ -16,7 +16,7 @@ const caesarCipher = (str, num) => {
     if (newIndex < 0) newIndex += 26;
     if (str[i] === str[i].toUpperCase()) {
       newStr += alphabet[newIndex].toUpperCase();
-    }
+     }
     else newStr += alphabet[newIndex];
   }
   return newStr;
