@@ -6,16 +6,17 @@ const caesarCipher = (str, num) => {
   let newStr = '';
   for (let i = 0; i < lowerCaseStr.length; i += 1) {
     const currentLetter = lowerCaseStr[i];
-    if (currentLetter === ' ') {
+    if (currentLetter === ' ' || !alpha.includes(currentLetter)) {
       newStr += currentLetter;
-      continue;
+      // continue;
+    } else {
+      const currentIndex = alphabet.indexOf(currentLetter);
+      let newIndex = currentIndex + num;
+      if (newIndex > 25) newIndex -= 26;
+      if (newIndex < 0) newIndex += 26;
+      if (str[i] === str[i].toUpperCase()) newStr += alphabet[newIndex].toUpperCase();
+      else newStr += alphabet[newIndex];
     }
-    const currentIndex = alphabet.indexOf(currentLetter);
-    let newIndex = currentIndex + num;
-    if (newIndex > 25) newIndex -= 26;
-    if (newIndex < 0) newIndex += 26;
-    if (str[i] === str[i].toUpperCase()) newStr += alphabet[newIndex].toUpperCase();
-    else newStr += alphabet[newIndex];
   }
   return newStr;
 };
